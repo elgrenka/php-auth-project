@@ -10,8 +10,17 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-Hello
+<form action="" method="POST">
+    <label for="login">Логин: </label>
+    <input type="text" id="login" placeholder="Enter login">
+    <label for="pass">Пароль: </label>
+    <input type="password" id="pass" placeholder="Enter password">
+    <button type="submit">Вход</button>
+    <p>
+        Ещё нет аккаунта? - <a href="register.php">Регистрация</a>
+    </p>
+</form>
 </body>
 </html>
 
-<?php
+
