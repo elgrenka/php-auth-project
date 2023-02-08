@@ -52,17 +52,22 @@ body form .msg {
   font-weight: bold;
   color: crimson;
 }
-
-.error {
+body .main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body .main img {
+  width: 150px;
+}
+body .main .logout {
+  color: #b7625c;
+}
+body .error {
   border-bottom: 2px solid #ff4332;
 }
-
-.none {
+body .none {
   display: none;
-}
-
-.logout {
-  color: #b7625c;
 }
 
 /*# sourceMappingURL=style.css.map */

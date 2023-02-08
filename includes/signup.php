@@ -18,13 +18,13 @@ if ($password === $password_confirm) {
         header('Location: ../register.php');
     }
 
-    $password = password_hash($password, PASSWORD_DEFAULT);
+    $password = md5($password);
     $query = "
         INSERT INTO `users` (`id`, `name`, `login`, `email`, `password`, `avatar`)
         VALUES (NULL, '$name', '$login', '$email', '$password', '$path');
     ";
 
-    echo "<script>console.log($password)</script>";
+//    echo "<script>console.log($password)</script>";
     mysqli_query($connect, $query);
     $_SESSION['message'] = "Register completed successfully";
     header('Location: ../index.php');

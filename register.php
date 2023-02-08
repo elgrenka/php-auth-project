@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+if(isset($_SESSION['user'])) {
+    header('Location: profile.php');
+}
 ?>
 
 <!doctype html>
@@ -18,16 +22,22 @@ session_start();
 <form action="includes/signup.php" method="POST" enctype="multipart/form-data">
     <label for="name">ФИО</label>
     <input type="text" name="name" id="name" placeholder="Введите своё ФИО">
+
     <label for="login">Логин</label>
     <input type="text" name="login" id="login" placeholder="Введите свой логин">
+
     <label for="email">Почта</label>
     <input type="email" name="email" id="email" placeholder="Введите эл. почту">
+
     <label for="avatar">Изображение профиля</label>
     <input type="file" name="avatar" id="avatar">
+
     <label for="pass">Пароль</label>
     <input type="password" name="password" id="pass" placeholder="Введите пароль">
+
     <label for="pass_confirm">Подтверждение пароля</label>
     <input type="password" name="password_confirm" id="pass_confirm" placeholder="Подтвердите пароль">
+
     <button type="submit" class="register-btn">Зарегистрироваться</button>
     <p>
         Уже есть аккаунт? - <a href="/">Авторизация</a>

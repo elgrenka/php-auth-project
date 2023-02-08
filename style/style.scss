@@ -60,16 +60,27 @@ body {
       color: crimson;
     }
   }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    img {
+      width: 150px;
+    }
+
+    .logout {
+      color: #b7625c;
+    }
+  }
+
+  .error {
+    border-bottom: 2px solid #ff4332;
+  }
+
+  .none {
+    display: none;
+  }
 }
 
-.error {
-  border-bottom: 2px solid #ff4332;
-}
-
-.none {
-  display: none;
-}
-
-.logout {
-  color: #b7625c;
-}
